@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Whistle Podu Central is a fan-built Chennai Super Kings hub with fixtures, squad profiles, statistics, news, and interactive fan features."
+  >
+  <title>Whistle Podu Central | Chennai Super Kings Fan Hub</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <div class="bg-orb bg-orb-left" aria-hidden="true"></div>
+    <div class="bg-orb bg-orb-right" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="Whistle Podu Central home">
+        <span class="brand-mark">CSK</span>
+        <span class="brand-copy">
+          <strong>Whistle Podu Central</strong>
+          <small>Chennai Super Kings Fan Hub</small>
+        </span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        Menu
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="#schedule">Schedule</a>
+        <a href="#squad">Squad</a>
+        <a href="#stats">Stats</a>
+        <a href="#news">News</a>
+        <a href="#fan-zone">Fan Zone</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Yellove. Rhythm. Roar.</p>
+          <h1>The Chennai roar deserves a home that feels match-ready.</h1>
+          <p class="hero-text">
+            This supporter-built experience tracks Chennai Super Kings through the first phase of IPL 2026 with a responsive fan hub for fixtures, player profiles, team composition, updates, and crowd interaction.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="#schedule">Explore Fixtures</a>
+            <a class="button button-secondary" href="#fan-zone">Join Fan Zone</a>
+          </div>
+
+          <div class="hero-badges">
+            <article>
+              <strong>5</strong>
+              <span>IPL titles</span>
+            </article>
+            <article>
+              <strong>25</strong>
+              <span>Squad members</span>
+            </article>
+            <article>
+              <strong>Chepauk</strong>
+              <span>Home fortress</span>
+            </article>
+          </div>
+        </div>
+
+        <aside class="hero-panel">
+          <div class="countdown-card card">
+            <div class="section-heading">
+              <p class="eyebrow">Next Match Countdown</p>
+              <h2>Season opener</h2>
+            </div>
+            <div class="fixture-highlight">
+              <span>RR</span>
+              <strong>vs</strong>
+              <span>CSK</span>
+            </div>
+            <p class="fixture-meta">March 30, 2026 - 7:30 PM IST - Guwahati</p>
+            <div id="countdown" class="countdown" aria-live="polite">
+              <div><strong>00</strong><span>Days</span></div>
+              <div><strong>00</strong><span>Hours</span></div>
+              <div><strong>00</strong><span>Minutes</span></div>
+              <div><strong>00</strong><span>Seconds</span></div>
+            </div>
+          </div>
+
+          <div class="pulse-card card">
+            <div class="section-heading">
+              <p class="eyebrow">Matchday Pulse</p>
+              <h2>Fan ticker demo</h2>
+            </div>
+            <p class="ticker-label">This rotating panel simulates how a live-update module would feel on matchday.</p>
+            <div class="ticker-board">
+              <div>
+                <div>
+                  <small>Current phase</small>
+                  <strong id="ticker-phase">Pre-match buzz</strong>
+                </div>
+                <div>
+                  <small>Score focus</small>
+                  <strong id="ticker-score">CSK 0/0</strong>
+                </div>
+              </div>
+              <p id="ticker-update">Team news, fan noise, and pressure moments can be surfaced here in real time.</p>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section id="schedule" class="content-section">
+        <div class="section-heading section-heading-wide">
+          <div>
+            <p class="eyebrow">Fixtures</p>
+            <h2>First phase match planner</h2>
+          </div>
+          <p class="section-intro">
+            The schedule below is built around the first phase of IPL 2026 fixtures currently announced for Chennai Super Kings.
+          </p>
+        </div>
+        <div id="fixtures-grid" class="fixtures-grid"></div>
+      </section>
+
+      <section id="squad" class="content-section">
+        <div class="section-heading section-heading-wide">
+          <div>
+            <p class="eyebrow">Squad</p>
+            <h2>Role-based player profiles</h2>
+          </div>
+          <p class="section-intro">
+            Filter the roster by role to jump between top-order control, finishing power, seam options, and spin depth.
+          </p>
+        </div>
+
+        <div class="filter-bar" role="tablist" aria-label="Squad filters">
+          <button class="filter-chip is-active" type="button" data-filter="all">All</button>
+          <button class="filter-chip" type="button" data-filter="batter">Batters</button>
+          <button class="filter-chip" type="button" data-filter="wk-batter">WK-Batters</button>
+          <button class="filter-chip" type="button" data-filter="all-rounder">All-rounders</button>
+          <button class="filter-chip" type="button" data-filter="bowler">Bowlers</button>
+        </div>
+
+        <div id="squad-grid" class="squad-grid"></div>
+      </section>
+
+      <section id="stats" class="content-section">
+        <div class="section-heading section-heading-wide">
+          <div>
+            <p class="eyebrow">Statistics</p>
+            <h2>Squad build and championship pulse</h2>
+          </div>
+          <p class="section-intro">
+            A concise dashboard that blends enduring franchise identity with the current 2026 squad mix.
+          </p>
+        </div>
+
+        <div class="stats-layout">
+          <div class="stats-grid">
+            <article class="stat-card card">
+              <small>Championships</small>
+              <strong>5</strong>
+              <span>2010, 2011, 2018, 2021, 2023</span>
+            </article>
+            <article class="stat-card card">
+              <small>Captain</small>
+              <strong>Ruturaj Gaikwad</strong>
+              <span>Leading the 2026 campaign</span>
+            </article>
+            <article class="stat-card card">
+              <small>Coach</small>
+              <strong>Stephen Fleming</strong>
+              <span>Continuity on the tactical side</span>
+            </article>
+            <article class="stat-card card">
+              <small>Home Venue</small>
+              <strong>Chepauk</strong>
+              <span>M. A. Chidambaram Stadium</span>
+            </article>
+          </div>
+
+          <div class="composition card">
+            <div class="section-heading">
+              <p class="eyebrow">2026 Squad Composition</p>
+              <h3>Balance across roles</h3>
+            </div>
+            <div class="composition-bars">
+              <div>
+                <div class="bar-copy">
+                  <span>Batters + WK-Batters</span>
+                  <strong>8</strong>
+                </div>
+                <div class="bar"><span style="width: 32%"></span></div>
+              </div>
+              <div>
+                <div class="bar-copy">
+                  <span>All-rounders</span>
+                  <strong>8</strong>
+                </div>
+                <div class="bar"><span style="width: 32%"></span></div>
+              </div>
+              <div>
+                <div class="bar-copy">
+                  <span>Bowlers</span>
+                  <strong>9</strong>
+                </div>
+                <div class="bar"><span style="width: 36%"></span></div>
+              </div>
+              <div>
+                <div class="bar-copy">
+                  <span>Overseas players</span>
+                  <strong>8</strong>
+                </div>
+                <div class="bar"><span style="width: 32%"></span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="news" class="content-section">
+        <div class="section-heading section-heading-wide">
+          <div>
+            <p class="eyebrow">Newsroom</p>
+            <h2>Recent team updates</h2>
+          </div>
+          <p class="section-intro">
+            Important announcements and match reports collected into a single skimmable feed for supporters.
+          </p>
+        </div>
+        <div id="news-grid" class="news-grid"></div>
+      </section>
+
+      <section id="fan-zone" class="content-section">
+        <div class="section-heading section-heading-wide">
+          <div>
+            <p class="eyebrow">Fan Zone</p>
+            <h2>Interact, vote, and leave your mark</h2>
+          </div>
+          <p class="section-intro">
+            These front-end features keep the site participatory even without a backend: a saved poll, a local fan wall, and social touchpoints.
+          </p>
+        </div>
+
+        <div class="fan-layout">
+          <article class="card poll-card">
+            <div class="section-heading">
+              <p class="eyebrow">Weekly Poll</p>
+              <h3>What gives CSK the edge this phase?</h3>
+            </div>
+            <form id="poll-form" class="poll-form">
+              <label>
+                <input type="radio" name="matchEdge" value="Powerplay intent">
+                <span>Powerplay intent</span>
+              </label>
+              <label>
+                <input type="radio" name="matchEdge" value="Spin choke">
+                <span>Spin choke</span>
+              </label>
+              <label>
+                <input type="radio" name="matchEdge" value="Finisher calm">
+                <span>Finisher calm</span>
+              </label>
+              <button class="button button-primary" type="submit">Submit vote</button>
+            </form>
+            <div id="poll-results" class="poll-results" aria-live="polite"></div>
+          </article>
+
+          <article class="card wall-card">
+            <div class="section-heading">
+              <p class="eyebrow">Fan Wall</p>
+              <h3>Post your matchday note</h3>
+            </div>
+            <form id="fan-form" class="fan-form">
+              <label>
+                <span>Name</span>
+                <input id="fan-name" name="name" type="text" maxlength="24" placeholder="Whistle Podu fan" required>
+              </label>
+              <label>
+                <span>Message</span>
+                <textarea id="fan-message" name="message" rows="4" maxlength="140" placeholder="Chepauk energy travels everywhere." required></textarea>
+              </label>
+              <button class="button button-secondary" type="submit">Add to wall</button>
+            </form>
+            <div id="fan-wall" class="fan-wall" aria-live="polite"></div>
+          </article>
+
+          <article class="card social-card">
+            <div class="section-heading">
+              <p class="eyebrow">Supporter Circuit</p>
+              <h3>Keep the energy moving</h3>
+            </div>
+            <ul class="social-list">
+              <li>
+                <strong>Hashtag:</strong>
+                <span>#WhistlePoduCentral</span>
+              </li>
+              <li>
+                <strong>Watchword:</strong>
+                <span>Calm in the chase, loud in the stands.</span>
+              </li>
+              <li>
+                <strong>Build next:</strong>
+                <span>Forum threads, live API feed, official social embeds.</span>
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
